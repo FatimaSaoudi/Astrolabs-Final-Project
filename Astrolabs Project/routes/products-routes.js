@@ -14,7 +14,7 @@ router.post('/add',
             "price": req.body.price,
             "size": req.body.size,
             "categories": req.body.categories,
-
+            "uploadedDate": req.body.uploadedDate,
         }
 
         // Create the document in MongoDB
@@ -64,6 +64,16 @@ function (req, res) {
 
   if (req.body.title) {
     newDocument["title"] = req.body.title;
+  }
+
+  if (req.body.price) {
+    newDocument["price"] = req.body.price;
+  } 
+  if (req.body.description) {
+    newDocument["description"] = req.body.description;
+  } 
+  if (req.body.size) {
+    newDocument["size"] = req.body.size;
   }
 
 ProductModel.findOneAndUpdate(
