@@ -69,7 +69,7 @@ router.put('/update',
         if (req.body.phone) {
             updates['phone'] = req.body.phone;
         };
-        if (req.body.phone) {
+        if (req.body.address) {
             updates['address'] = req.body.address;
         };
 
